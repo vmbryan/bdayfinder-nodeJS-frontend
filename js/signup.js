@@ -24,6 +24,10 @@ const btnSignup = document.querySelector(".signup__btn").addEventListener("click
             let feedback = document.querySelector(".alert")
             feedback.textContent = "Signup complete!"
             feedback.classList.remove('hidden')
+
+            let token = json.data.token
+            localStorage.setItem("token", token)
+            window.location.href = "app.html"
         }
     })
 })
