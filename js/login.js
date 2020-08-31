@@ -16,7 +16,9 @@ const btnLogin = document.querySelector('.login__btn').addEventListener('click',
     }).then(json => {
         if(json.status === "success"){
             let token = json.data.token
+            let name = json.data.name
             localStorage.setItem("token", token)
+            localStorage.setItem("name", name)
             window.location.href = "index.html"
         }else{
             let feedback = document.querySelector(".alert")
