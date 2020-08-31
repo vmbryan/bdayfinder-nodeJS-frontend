@@ -1,5 +1,5 @@
 const btnSignup = document.querySelector(".signup__btn").addEventListener("click", function(){
-    let email = document.querySelector('#email').value
+    let username = document.querySelector('#email').value
     let firstname = document.querySelector('#firstname').value
     let lastname = document.querySelector('#lastname').value
     let birthday = document.querySelector('#birthday').value
@@ -11,7 +11,7 @@ const btnSignup = document.querySelector(".signup__btn").addEventListener("click
             'Content-type' : 'application/json'
         },
         body: JSON.stringify({
-            "email" : email,
+            "username" : username,
             "firstname" : firstname,
             "lastname" : lastname,
             "birthday" : birthday,
