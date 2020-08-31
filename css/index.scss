@@ -1,0 +1,122 @@
+@mixin listStyling(){
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+}
+@mixin flexCenter(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$background :#4545a5;
+$backgroundApp :#efeef6;
+$colorBtnMain : #ff7655;
+$colorBtnAccent : #fac2b3;
+$accentWhite : #fafafb;
+$accentPurple : #f7f0f2;
+
+*{
+    font-family: "Helvetica";
+    box-sizing: border-box;
+}
+html { 
+    height: 100%; display: flex; 
+}
+
+body{
+    background-color: $backgroundApp;
+    
+}
+
+ul{
+    @include listStyling()
+}
+.imposter{
+    height: 100vh;
+    width: 100vw;
+    @include flexCenter();
+}
+.app{
+    background-color: white;
+    width: 80%;
+    height: 60%;
+    display: grid;
+    grid-template: repeat(6, 1fr) / repeat(5,1fr);
+}
+.users{
+    background-color: $background;
+    grid-area: 1/1/7/2;
+    &__list{
+        color: white;
+        padding: 20px;
+    }
+    &__item{
+        display: flex;
+    }
+    &__badge{
+        display: inline-block;
+        background-color: #65eb77;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    &__name{
+        padding-left: 10px;
+    }
+}
+.chats{
+    grid-area: 1/2/7/6;
+    padding: 20px;
+}
+.chatlog{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &__item{
+        padding: 10px;
+        margin-bottom: 10px;
+        display: block;
+    }
+    &__item--sent{
+        background-color: #e8e8f2;
+        text-align: right;
+    }
+    &__item--received{
+        background-color:$colorBtnAccent;
+    }
+    &__name{
+        margin: 0;
+        font-size: 1.1em;
+    }
+    &__text{
+        margin: 0;
+    }
+}
+
+.message{
+    grid-area: 6/2/7/6;
+    background: $colorBtnMain;
+    display:flex;
+    &__input{
+        width: 400px;
+        height: 50%;
+        font-size: 1.2em;
+        border: transparent;
+        background-color: $colorBtnAccent;
+        border-radius: 30px;
+        padding-left: 20px;
+        margin: auto 20px;
+        color: white;
+        &:focus{
+            outline: none;
+        }
+        &::placeholder{
+            color: white;
+        }
+    }
+}
+

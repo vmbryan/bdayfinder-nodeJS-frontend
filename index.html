@@ -4,19 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Chat</title>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-    <div class="app">
-        <div class="chats">
-
-
-
-          <div class="chat__new">
-            <input type="text" class="input--text chat__input" placeholder="Send a message">
-          </div>
-
+    <div class="imposter">
+        <div class="app">
+            <div class="users">
+                <ul class="users__list">
+                    <li class="users__item">
+                        <span class="users__badge"></span>
+                        <p class= users__name>User A</p>
+                    </li>
+    
+                    <li class="users__item users__item--offline">
+                        <span class="users__badge users__badge--offline"></span>
+                        <p class= users__name>User B</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="chats">
+              <ul class="chatlog">
+                  <li class="chatlog__item chatlog__item--received">
+                      <h1 class="chatlog__name">Person A</h1>
+                      <p class="chatlog__text">Hey how are you?</p>
+                  </li>
+    
+                  <li class="chatlog__item chatlog__item--sent">
+                    <h1 class="chatlog__name">Person b</h1>
+                    <p class="chatlog__text">I'm good thanks!</p>
+                </li>
+    
+              </ul>
+            </div>
+            <div class="message">
+                <input type="text" class="input--text message__input" placeholder="Send a message">
+            </div>
         </div>
     </div>
+
 
     <script src="js/index.js"></script>
 </body>
