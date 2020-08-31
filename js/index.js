@@ -1,4 +1,8 @@
 const base_url = 'https://bdayfinder-nodejs.herokuapp.com'
+/* redirect als je niet bent ingelogd*/
+if(!localStorage.getItem("token")){
+    window.location.href = "login.html"
+}
 fetch(base_url + "/api/v1/chats", {
     'headers' : {
         'Authorization': 'Bearer ' + localStorage.getItem('token')
