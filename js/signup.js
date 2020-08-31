@@ -1,3 +1,4 @@
+const base_url = 'https://bdayfinder-nodejs.herokuapp.com'
 const btnSignup = document.querySelector(".signup__btn").addEventListener("click", function(){
     let username = document.querySelector('#email').value
     let firstname = document.querySelector('#firstname').value
@@ -5,7 +6,7 @@ const btnSignup = document.querySelector(".signup__btn").addEventListener("click
     let birthday = document.querySelector('#birthday').value
     let password = document.querySelector('#password').value
 
-    fetch('http://localhost:3000/users/signup', {
+    fetch(base_url + '/users/signup', {
         method: "post",
         headers : {
             'Content-type' : 'application/json'

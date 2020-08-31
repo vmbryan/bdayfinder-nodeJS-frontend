@@ -1,8 +1,9 @@
+const base_url = 'https://bdayfinder-nodejs.herokuapp.com'
 const btnLogin = document.querySelector('.login__btn').addEventListener('click', function(){
     let username = document.querySelector('#email').value
     let password = document.querySelector('#password').value
 
-    fetch('http://localhost:3000/users/login', {
+    fetch(base_url + '/users/login', {
         method: 'post',
         headers: {
             'Content-type': 'application/json'

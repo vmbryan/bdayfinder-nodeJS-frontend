@@ -1,4 +1,5 @@
-fetch("http://localhost:3000/api/v1/chats", {
+const base_url = 'https://bdayfinder-nodejs.herokuapp.com'
+fetch(base_url + "/api/v1/chats", {
     'headers' : {
         'Authorization': 'Bearer ' + localStorage.getItem('token')
     } 
