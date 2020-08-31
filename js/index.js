@@ -22,7 +22,7 @@ input.addEventListener("keyup", e => {
         // op de enter
         let text = input.value
         let sender = localStorage.getItem('name')
-        fetch('http://localhost:3000/api/v1/chats', {
+        fetch(base_url + '/api/v1/chats', {
             method: "post",
             "headers": {
                 'Content-type': 'application/json', 
