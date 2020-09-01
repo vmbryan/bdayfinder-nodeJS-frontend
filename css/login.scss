@@ -1,0 +1,89 @@
+@mixin flexColumn(){
+    display:flex;
+    flex-direction: column;
+}
+
+$background :#4545a5;
+$backgroundApp :#efeef6;
+$colorBtnMain : #ff7655;
+$colorBtnAccent : #fac2b3;
+$accentWhite : #fafafb;
+$accentPurple : #f7f0f2;
+
+* {
+    box-sizing: border-box;
+}
+
+html { 
+    height: 100%; display: flex; 
+}
+
+body
+{
+  font-family: Helvetica, sans-serif;
+  background-color:$background;
+  margin: auto;
+}
+.app{
+    background-color: $backgroundApp;
+    padding: 20px;
+    width : 350px
+}
+.hidden{
+   display:none; 
+}
+.alert
+{
+  background-color: #B4C4E7;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  color: #32549d;
+}
+.title{
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.login__btn{
+    background: $colorBtnMain;
+    border: none;
+    padding: 10px 40px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 30px;
+    &:focus{
+        outline:none;
+    }
+}
+
+.login{
+    @include flexColumn();
+
+}
+
+.email{
+    @include flexColumn();
+    &__label{
+        font-size: 1.4em;
+        margin-bottom: 10px;
+    }
+    &__input{
+        height: 30px;
+        margin-bottom: 20px;
+    }
+}
+.password{
+    @include flexColumn();
+    &__label{
+        font-size: 1.4em;
+        margin-bottom: 10px;
+    }
+    &__input{
+        height: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+
